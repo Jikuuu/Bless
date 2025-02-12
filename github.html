@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>First</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("backk.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .bigbox {
+            width: 500px;
+            padding: 20px;
+            border: 1px solid black;
+            background-image: url("letter.jpg");
+            background-size: cover;
+            text-shadow: 3px 2px 3px wheat;
+            color: maroon;
+            box-shadow: 10px 10px 20px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #tixt {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Image adjustments */
+        #miming {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            margin: 10px;
+        }
+
+        /* Buttons side by side */
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px;
+            width: 120px;
+            border: none;
+            box-shadow: 5px 5px 10px black;
+            border: 1px solid black;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            filter: brightness(1.2);
+            transform: scale(1.1);
+        }
+
+        #yea {
+            background-color: green;
+        }
+
+        #nah {
+            background-color: blue;
+        }
+
+        #yea:hover {
+            background-color: #28a745;
+        }
+
+        #nah:hover {
+            background-color: #4052d6;
+        }
+
+        #tixt {
+            text-shadow: 2px 3px 5px white;
+        }
+
+        .fade-in {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 9999;
+            animation: fadeOut 1s ease-out forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        img {
+            box-shadow: 4px 3px 3px black;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="fade-in"></div>
+    <div class="bigbox">
+        <h1 id="tixt">REALLY?? YEEY, now click the button below :)</h1>
+        <img src="yay.jpg" id="miming" alt="Cute Cat">
+        
+        <div class="button-container">
+            <button id="nah">Surprise</button>
+        </div>
+    </div>
+
+<script>
+
+    document.getElementById('nah').addEventListener('click', () => {
+        window.location.href = 'kk.html';
+    });
+</script>
+
+</body>
+</html>
